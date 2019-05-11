@@ -32,7 +32,7 @@ LogStatusPass
 
 LogStatusFail
     ${header}=	Create Dictionary	Content-Type=application/json
-    ${auth}=  create list  testingworldindia@gmail.com   SHPJd6uwgmmPUjAbk80g
+    ${auth}=  create list  youremail   password(TestRail)
     ${param}=  create dictionary  status_id=5
     create session  Session1  ${URL}  auth=${auth}  headers=${header}
     ${Res}=  post request  Session1   /index.php?/api/v2/add_result_for_case/1/1  data=${param}
